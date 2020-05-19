@@ -7,10 +7,8 @@ Created on Fri May  8 06:53:26 2020
 """
 
 
-import http.client
-from PIL import Image
-import io
-import numpy as np
+
+
 import cv2
 from deeplearn import loadModel,load_image
 
@@ -46,5 +44,5 @@ while(True):
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
-
+cap.release()
 cv2.destroyAllWindows()

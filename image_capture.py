@@ -5,16 +5,8 @@ Created on Fri May  8 04:57:00 2020
 @author: Robomy
 """
 
-import http.client
-from PIL import Image
-import io
-import numpy as np
 import cv2
-
-
 cap = cv2.VideoCapture(0)
-
-
 
 i = 0 # image id for saving
 while(True):
@@ -31,5 +23,5 @@ while(True):
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
-
+cap.release()
 cv2.destroyAllWindows()
